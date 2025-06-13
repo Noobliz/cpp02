@@ -6,16 +6,16 @@ class Fixed
 {
     private:
         int _value;
-        static const int _fractionalBits = 8;
+        static const int _fractionalBits;
 
     public:
-    Fixed(); // default constr
-    Fixed(const Fixed &other); // copy constr
-    Fixed &operator=(const Fixed &other); // copy assignment operator overload (replace object's datas by an other one)
-    ~Fixed();
+        Fixed(); // default constr
+        Fixed(const Fixed &other); // copy constr
+        Fixed &operator=(const Fixed &other); // copy assignment operator overload (replace object's datas by an other one)
+        ~Fixed();
 
-    int getRawBits(void) const;
-    void setRwaBits(int const raw);
+        int getRawBits(void) const;
+        void setRwaBits(int const raw);
 
 };
 
