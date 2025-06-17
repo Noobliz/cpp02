@@ -17,17 +17,34 @@ class Fixed
         Fixed &operator=(const Fixed &other); // copy assignment operator overload (replace object's datas by an other one)
         ~Fixed();
 
+        bool operator>(const Fixed &other) const;
+        bool operator<(const Fixed &other) const;
+        bool operator>=(const Fixed &other) const;
+        bool operator<=(const Fixed &other) const;
+        bool operator==(const Fixed &other) const;
+        bool operator!=(const Fixed &other) const;
+
+        Fixed operator+(const Fixed& other) const;
+        Fixed operator-(const Fixed& other) const;
+        Fixed operator*(const Fixed& other) const;
+        Fixed operator/(const Fixed& other) const;
+
+        Fixed& operator++();        // pré-incrémentation
+        Fixed operator++(int);      // post-incrémentation
+        Fixed& operator--();
+        Fixed operator--(int);
+
+        static Fixed& min(Fixed& a, Fixed& b);
+        static Fixed& max(Fixed& a, Fixed& b);
+        static const Fixed& min(const Fixed& a, const Fixed& b);
+        static const Fixed& max(const Fixed& a, const Fixed& b);
+
+
         int getRawBits(void) const;
         void setRwaBits(int const raw);
         float toFloat(void) const;
 		int toInt(void) const;
 
-        bool operator>(const Fixed &other);
-        bool Fixed::operator<(const Fixed &other);
-        bool Fixed::operator>=(const Fixed &other);
-        bool Fixed::operator<=(const Fixed &other);
-        bool Fixed::operator==(const Fixed &other);
-        bool Fixed::operator!=(const Fixed &other);
 
 };
 

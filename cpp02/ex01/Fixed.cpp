@@ -41,7 +41,7 @@ Fixed::Fixed(const float floatVal)
 Fixed::~Fixed(){
     std::cout<<"Destructor called"<<std::endl;
 }
-
+//-------------------------------------------------member functions
 int Fixed::getRawBits(void) const{
     std::cout<<"getRawBits member function called"<<std::endl;
     return (this->_value);
@@ -67,6 +67,7 @@ int Fixed::toInt(void) const
     return (res);
 }
 
+//-------------------------------------------------------operand
 std::ostream &operator<<(std::ostream &out, const Fixed &other)
 {
     out<<other.toFloat();
