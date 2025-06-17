@@ -73,10 +73,6 @@ std::ostream &operator<<(std::ostream &out, const Fixed &other)
 }
 
 
-
-
-
-
 // ----------------------------------operators
 bool Fixed::operator>(const Fixed &other) const
 {

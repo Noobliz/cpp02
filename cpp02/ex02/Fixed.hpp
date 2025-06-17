@@ -29,8 +29,8 @@ class Fixed
         Fixed operator*(const Fixed& other) const;
         Fixed operator/(const Fixed& other) const;
 
-        Fixed& operator++();        // pré-incrémentation
-        Fixed operator++(int);      // post-incrémentation
+        Fixed& operator++();        // pré++
+        Fixed operator++(int);      // post++
         Fixed& operator--();
         Fixed operator--(int);
 
